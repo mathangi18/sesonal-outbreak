@@ -1,0 +1,48 @@
+{
+    "compilation_issues": [
+        {
+            "file": "Assets/Editor/ProjectSetup.cs",
+            "severity": "Error",
+            "message": "Missing using System.Collections.Generic; and Type Mismatch (Fixed)"
+        }
+    ],
+    "duplicates": [],
+    "unused_assets": [],
+    "hot_paths": [
+        {
+            "file": "Assets/Scripts/PatientSpawner.cs",
+            "line": 65,
+            "message": "Instantiate called in SpawnPatient (triggered by Update)"
+        },
+        {
+            "file": "Assets/Scripts/ParetoCalculator.cs",
+            "line": 11,
+            "message": "Instantiate called in PlotPoint"
+        }
+    ],
+    "serialization_issues": [
+        {
+            "file": "Assets/Scenes/Main.unity",
+            "severity": "Warning",
+            "message": "Could not definitively verify PatientSpawner configuration. Run 'Fix Spawn System' to ensure correctness."
+        }
+    ],
+    "performance_issues": [],
+    "project_structure": [
+        {
+            "file": ".gitignore",
+            "severity": "Warning",
+            "message": "Missing .gitignore (Fixed)"
+        }
+    ],
+    "automated_fixes": [
+        {
+            "file": "Assets/Editor/ProjectSetup.cs",
+            "change": "Added using System.Collections.Generic; and fixed Transform[] assignment."
+        },
+        {
+            "file": ".gitignore",
+            "change": "Created standard Unity .gitignore."
+        }
+    ]
+}

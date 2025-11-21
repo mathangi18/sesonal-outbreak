@@ -959,7 +959,7 @@ MonoBehaviour:
   - {fileID: 502923362}
   - {fileID: 1542577519}
   - {fileID: 1092387276}
-  spawnRatePerHour: 20
+  spawnRate: 20
 --- !u!4 &643532033
 Transform:
   m_ObjectHideFlags: 0
@@ -1593,7 +1593,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1623094549}
-  - component: {fileID: 1623094548}
+  - component: {fileID: 1623094550}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1601,24 +1601,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1623094548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623094547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cfbd89fa2df5a745877f177be131d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PatientSpawner
-  patientPrefab: {fileID: 222223063693794050, guid: 367b071be807d754bbb34905a2377bda, type: 3}
-  spawnPoints:
-  - {fileID: 502923362}
-  - {fileID: 1542577519}
-  - {fileID: 1092387276}
-  spawnRatePerHour: 20
 --- !u!4 &1623094549
 Transform:
   m_ObjectHideFlags: 0
@@ -1637,6 +1619,24 @@ Transform:
   - {fileID: 1092387276}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1623094550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623094547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cfbd89fa2df5a745877f177be131d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PatientSpawner
+  patientPrefab: {fileID: 222223063693794050, guid: 367b071be807d754bbb34905a2377bda, type: 3}
+  spawnPoints:
+  - {fileID: 502923362}
+  - {fileID: 1542577519}
+  - {fileID: 1092387276}
+  spawnRate: 20
 --- !u!1 &1624363067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PatientSpawner
   patientPrefab: {fileID: 0}
   spawnPoints: []
-  spawnRatePerHour: 2
+  spawnRate: 20
 --- !u!114 &1624363072
 MonoBehaviour:
   m_ObjectHideFlags: 0
