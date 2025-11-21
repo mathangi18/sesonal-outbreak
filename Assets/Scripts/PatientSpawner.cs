@@ -10,8 +10,23 @@ public class PatientSpawner : MonoBehaviour
 
     private float nextSpawnTime = 0f;
 
+    // TEMP DEBUG - remove after investigation
+    private GameObject _prevPrefab;
+    void Awake() {
+        _prevPrefab = patientPrefab;
+        Debug.Log($"[PS DEBUG] Awake on '{gameObject.name}' prefab={patientPrefab}", this);
+    }
+    void Start() {
+        Debug.Log($"[PS DEBUG] Start on '{gameObject.name}' prefab={patientPrefab}", this);
+    }
+
     private void Update()
     {
+        if (_prevPrefab != patientPrefab) {
+            Debug.LogError($"[PS DEBUG] patientPrefab changed for '{gameObject.name}': now={patientPrefab}\nStack:\n{new System.Diagnostics.StackTrace(true)}", this);
+            _prevPrefab = patientPrefab;
+        }
+
         // Defensive check for Managers
         if (HybridGameManager.Instance == null || !HybridGameManager.Instance.isGameActive) return;
         if (GameClock.Instance == null) return;
