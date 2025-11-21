@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using System.Collections.Generic;
 
 public class ProjectSetup : EditorWindow
 {
@@ -98,7 +99,7 @@ public class ProjectSetup : EditorWindow
             spawner.patientPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/Patient.prefab");
             // Create spawn points
             GameObject spawnPoint = new GameObject("SpawnPoint");
-            spawner.spawnPoints = new Transform[] { spawnPoint.transform };
+            spawner.spawnPoints = new List<Transform> { spawnPoint.transform };
         }
     }
 
